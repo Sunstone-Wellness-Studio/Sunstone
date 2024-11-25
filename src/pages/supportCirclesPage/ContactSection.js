@@ -1,0 +1,35 @@
+export const ContactSection=()=>{
+    return(
+    <section>
+            <div>
+                <div>
+                    <div>
+                        <div>
+                            <p>Call</p>
+                        </div>
+                        <div>
+                            <p>9044349285</p>
+                        </div>
+
+                    </div>
+                    <div>
+                        <div>
+                            <p>Email</p>
+                        </div>
+                        <div>
+                            <p>withgracemhcounseling@gmail.com</p>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <p>Follow</p>
+                        </div>
+                        <div>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        )
+}

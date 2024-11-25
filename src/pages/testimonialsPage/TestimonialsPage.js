@@ -1,5 +1,6 @@
 import {BsArrowLeftCircle,BsArrowRightCircle} from 'react-icons/bs';
 import { useState } from 'react';
+import './TestimonialsPage.less';
 export const Reviews=(props)=>{
     const[current, setCurrent]=useState(0);
     const length=props.reviews.length
@@ -22,7 +23,7 @@ export const Reviews=(props)=>{
         <BsArrowLeftCircle className='leftArrow' onClick={prevSlide}/>
             <BsArrowRightCircle className='rightArrow' onClick={nextSlide}/>
         {/*carousel of reviews. set timeout for next review but also allow button click for next review*/}
-         <div class='reviewsBox'>
+         <div className='reviewsBox'>
             
             {props.reviews.map((review,i)=>{
                 return(
