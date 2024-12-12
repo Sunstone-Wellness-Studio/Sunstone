@@ -40,8 +40,10 @@ export const Header=()=>{
             <nav className='navBar'>
                 <NavLink to='/'>Home</NavLink>
                 <NavLink to='/about_me'>About</NavLink>
-                <DropDownNavLink navLink={serviceRoute}/>
-                <DropDownNavLink navLink={resourcesRoute}/>
+                <NavLink to ='/services'>Services</NavLink>
+                <NavLink to= '/resources'>Resources</NavLink>
+                {/* <DropDownNavLink navLink={serviceRoute}/> */}
+                {/* <DropDownNavLink navLink={resourcesRoute}/> */}
                 <NavLink to='/contact'>Contact</NavLink>
             </nav>
         </header>

@@ -2,33 +2,25 @@ import logo from './logo.svg';
 // import './App.css';
 import './App.less';
 import HomePage from './appMainPage/HomePage'
-import Main from './appMainPage/HomePage';
-import { useState, useEffect } from 'react';
-import { Route, Link, Switch } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import { AboutMe } from './pages/aboutPage/AboutMePage';
 import { LadiesRoom } from './appMainPage/LadiesRoom';
-import { Services } from './pages/servicesPage/ServicesPage';
+import { Services } from './appMainPage/ServicesPage';
 import { Header } from './reuseableComponents/Header';
 import { RightNavBar } from './appMainPage/RightNavBar';
 import { Footer } from './reuseableComponents/Footer';
-import { Reviews } from './pages/testimonialsPage/TestimonialsPage';
 import { Contact } from './appMainPage/ContactPage';
-import { Faq } from './pages/faqPage/FAQPage';
 import { SupportCircles } from './appMainPage/SupportCirclesPage';
 import { Resources } from './appMainPage/Resources';
-import { Shop } from './pages/shopPage/ShopPage';
-import { Product } from './pages/productPage/ProductPage';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css'
 import { ProductProvider } from "./ProductContext"; 
+import { HeroBanner } from './reuseableComponents/HeroBanner';
 
 {/*
   Todo...
+  styling
   media queries
-  yup form schema
-  git ignore for sensitive data
-  hovering over services should open dropndown menu that includes testimonials, faq and support circles
-  hovering over resources should open dropndown menu that includes shop
 */}
 toast.configure()
 function App() {
@@ -162,83 +154,86 @@ function App() {
     }
   ]
 
-  let [productInfo, setProductInfo] = useState(
-    {
-      img: "",
-      altText:"",
-      title: "",
-      description: "",
-      price: null,
-      externalLink: "",
-      route: ""
-    }
-  )
+  // let [productInfo, setProductInfo] = useState(
+  //   {
+  //     img: "",
+  //     altText:"",
+  //     title: "",
+  //     description: "",
+  //     price: null,
+  //     externalLink: "",
+  //     route: ""
+  //   }
+  // )
+
+  
   // console.log("app level product is "+ productInfo.title)
 
-  useEffect(() => {
-    console.log("Updated productInfo:", productInfo);
-}, [productInfo]);
+//   useEffect(() => {
+//     console.log("Updated productInfo:", productInfo);
+// }, [productInfo]);
 
-  function updateProductRoute(product){
-    setProductInfo({
-      img: product.img,
-      altText: product.altText,
-      title: product.title,
-      description: product.description,
-      price: product.price,
-      externalLink: product.externalLink,
-      route: product.route
-    })
-    console.log("inside update product route product " + product)
-    // console.log("inside update product route productinfo title is " + productInfo.title)
-  }
-  function resetProductRoute(){
-    setProductInfo({
-      img: "",
-      altText:"",
-      title: "",
-      description: "",
-      price: null,
-      externalLink: "",
-      route: ""
-    })
-  }
+  // function updateProductRoute(product){
+  //   setProductInfo({
+  //     img: product.img,
+  //     altText: product.altText,
+  //     title: product.title,
+  //     description: product.description,
+  //     price: product.price,
+  //     externalLink: product.externalLink,
+  //     route: product.route
+  //   })
+  //   console.log("inside update product route product " + product)
+  //   // console.log("inside update product route productinfo title is " + productInfo.title)
+  // }
+  // function resetProductRoute(){
+  //   setProductInfo({
+  //     img: "",
+  //     altText:"",
+  //     title: "",
+  //     description: "",
+  //     price: null,
+  //     externalLink: "",
+  //     route: ""
+  //   })
+  // }
 
   return (
-    <ProductProvider>
+    // <ProductProvider>
     <div className="App">
       
         <Header/>
+        
         <main>
           <Switch>
             <Route exact path='/'>
               <HomePage />
             </Route>
             {/* <Route exact path='/ladies_room' component={LadiesRoom}/> */}
-            <Route exact path='/about_me' component={AboutMe} />
-            <Route exact path='/services' >
+            <Route path='/about_me' component={AboutMe} />
+            <Route path='/services' >
               <Services services={services}/>
             </Route>
-            <Route exact path='/reviews' >
+            {/* <Route path='/reviews' >
               <Reviews reviews={reviews} />
-            </Route>
-            <Route exact path='/contact' component={Contact} />
-            <Route exact path='/faqs'>
+            </Route> */}
+            <Route  path='/contact' component={Contact} />
+            {/* <Route path='/faqs'>
               <Faq faqs={faqs} />
-            </Route>
-            <Route exact path='/support_circles' component={SupportCircles} />
-            <Route exact path='/resources' component={Resources} />
-            <Route exact path='/shop'>
+            </Route> */}
+            <Route path='/support_circles' component={SupportCircles} />
+            <Route path='/resources' component={Resources} />
+            {/* <Route path='/shop'>
               <Shop products={products} onStateChange={updateProductRoute}/>
-            </Route>
-            <Route exact path='/product'>
+            </Route> */}
+            {/* <Route path='/product'>
               <Product productInfo={productInfo}/>
-            </Route>
+            </Route> */}
           </Switch>
         </main>
       <Footer buttonImgs={buttonImgs} />
     </div>
-    </ProductProvider>
+    // </ProductProvider>
   );
 }
 

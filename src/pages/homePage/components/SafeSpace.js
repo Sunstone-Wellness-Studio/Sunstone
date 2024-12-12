@@ -11,9 +11,9 @@ export const SafeSpaceSection = () => {
                 <div>
                     <div>
                         <h3 className='text--black'>Your life can look and feel different.</h3></div>
-                    <div>
+                    {/* <div>
                         <img src="https://static.wixstatic.com/media/31f747_e0113dceed084f9fb557b0eb7a4845ad~mv2.jpg/v1/fill/w_374,h_512,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/31f747_e0113dceed084f9fb557b0eb7a4845ad~mv2.jpg" alt="Jae Littles" />
-                    </div>
+                    </div> */}
                     <div>
                         <p>I have confidence in your ability to foster change, and I'm committed to assisting you on that journey. Many of us grapple with negative beliefs that hinder self-recognition, causing us to occasionally lose our way. However, overcoming these challenges is possible, and I'm here to support you.</p>
                     </div>

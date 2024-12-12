@@ -1,6 +1,7 @@
 import {BsArrowLeftCircle,BsArrowRightCircle} from 'react-icons/bs';
 import { useState } from 'react';
-import './TestimonialsPage.less';
+import '../styles/TestimonialsPage.less';
+
 export const Reviews=(props)=>{
     const[current, setCurrent]=useState(0);
     const length=props.reviews.length

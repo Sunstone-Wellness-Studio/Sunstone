@@ -1,6 +1,7 @@
 import {Route,NavLink} from 'react-router-dom';
 import { SocialMediaButtons } from './SocialMediaButtons';
 import '../styles/Footer.less'
+import { SiteMap } from './SiteMap';
 export const Footer=(props)=>{
     return(
         <div id='footer'>
@@ -36,6 +37,7 @@ export const Footer=(props)=>{
                 )
             })}
             </div>
+            <SiteMap/>
             {/* </fieldset> */}
             {/* <button>Instagram</button>
         <button>Facebook</button>
