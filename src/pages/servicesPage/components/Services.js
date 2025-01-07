@@ -1,5 +1,6 @@
 import {NavLink} from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
+// import '../styles/servicesPage.less'
 
 export const ServicesSection = (props) => {
     
@@ -11,11 +12,12 @@ export const ServicesSection = (props) => {
       {props.services.map((service, i) => {
         return (
           <div key={i} className="serviceBox lightOliveBackOliveText">
-            <img src={service.serviceImg} />
+            <img className='serviceImg' src={service.serviceImg} />
             <div className="serviceDescriptions">
-              <p>{service.description}{service.service === "Therapy Circles"? <HashLink to='/support_circles'> Learn more</HashLink>:""}</p>
+              <p className='serviceDescription'>{service.description}{service.service === "Therapy Circles"? <div><HashLink to='/support_circles' id='circles'>Learn more</HashLink></div>:""}</p>
               <br />
-              <h3>{service.service}</h3>
+              <br/>
+              <h4>{service.service}</h4>
             </div>
           </div>
         );

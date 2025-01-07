@@ -43,7 +43,7 @@ const Main=()=>{
         }
       ]
     return(
-    <div >
+    <div id='homePageGridContainer'>
         
         {/* <div>
             <h3 id='imageQuote1'>HI, I’m glad you’re here!</h3>
@@ -66,17 +66,11 @@ const Main=()=>{
         {/* <HeroBanner bannerImgs = {heroBannerImages}/> */}
         {/* new addition to run by Jae */}
 
-        {/* move to run by Jae */}
         <WelcomeSection/>
-        {/* move to run by Jae */}
 
-        {/* move to run by Jae */}
         <QuoteSection/>
-        {/* move to run by Jae */}
-
-        {/* move to run by Jae */}
+          
         <SafeSpaceSection/>
-        {/* move to run by Jae */}
 
         <ApproachSection/>
         <GetInTouchSection/>

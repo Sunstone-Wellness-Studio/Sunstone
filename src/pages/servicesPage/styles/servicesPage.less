@@ -1,0 +1,134 @@
+#servicePageContent {
+    background-color: var(--clr-white);
+    color: var(--clr-sage);
+
+    h1 {
+        font-size: 5rem;
+        margin-bottom: 2rem;
+        margin-top: 5rem;
+    }
+}
+
+//services start
+
+.serviceBoxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    // width:80%;
+}
+
+// .serviceBoxes{
+//     display: flex;
+//     flex-direction: row;
+//     /* flex-wrap: wrap; */
+//     justify-content: space-evenly;
+//     height: 35em;
+//   }
+
+.serviceDescriptions {
+
+    h4 {
+        color: var(--clr-brunswick-green);
+        font-size: large;
+    }
+
+    p {
+        color: var(--clr-brunswick-green);
+        font-size: medium;
+    }
+}
+
+.serviceBox {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    height: 40rem;
+    width: 55rem;
+    margin: 3em;
+}
+
+.serviceBox div {
+    padding: 2rem;
+}
+
+.serviceImg {
+    height: 25rem;
+    width: 28rem;
+}
+
+#circles {
+    color: var(--clr-brunswick-green);
+    text-decoration: none;
+
+    &:hover {
+        color: var(--clr-fern-green);
+        font-size: large;
+        text-decoration: underline;
+    }
+
+}
+
+//services end
+
+//faq start
+#faqSection {
+    // padding: 5em;
+    color: black;
+    margin-bottom: 4rem;
+    // background-color: var(--clr-timberwolf);
+height: 110vh;
+
+}
+
+#faqBackgroundImg {
+
+    position: relative;
+    text-align: center;
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)), var(--img);
+    background-size: cover;
+    width: 100%;
+    height: 70vh;
+
+    h2 {
+        color: var(--clr-white);
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        text-align: 'center';
+        padding: '1rem 0';
+        font-size: xx-large;
+    }
+}
+
+.faqs {
+    
+}
+
+.faq {
+    display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 10px; 
+  padding: 3rem;
+
+  
+  h3 {
+    font-family: 'Georgia', serif; /* Or use a custom font */
+    font-size: 2rem; /* Adjust for size consistency */
+    font-weight: 400; /* Use a lighter weight */
+    color: var(--clr-brunswick-green); /* Match the softer color in the second image */
+  }
+  
+  p {
+    font-family: 'Georgia', serif;
+    font-size: 1rem;
+    font-weight: 300; /* Slightly lighter */
+    color: var(--clr-brunswick-green); /* Match text color */
+  }
+}
+
+//faq end

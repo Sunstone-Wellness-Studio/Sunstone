@@ -1,7 +1,7 @@
 import {ServicesSection} from '../pages/servicesPage/components/Services'
 import { Faq } from '../pages/servicesPage/components/FAQPage'
 import { Reviews } from '../pages/servicesPage/components/TestimonialsPage'
-
+import '../pages/servicesPage/styles/servicesPage.less'
 export const Services = () => {
     //make services,testimonials, grace circles, and faq all one page
     let services = [
@@ -71,9 +71,9 @@ export const Services = () => {
         //     answer:'I do offer both in person and virtual services. '}
       ]
     return (
-        <div className='whiteBackOliveText'>
+        <div id='servicePageContent'>
             <div>
-                <h2>Our Services</h2>
+                <h1>Our Services</h1>
             </div>
             {/* <div className="serviceBoxes"> */}
                 {/* {props.services.map((service,i)=>{

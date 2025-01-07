@@ -1,0 +1,13 @@
+{
+    "home": {
+      "welcomeMessage": "Welcome to our application!",
+      
+    },
+    "about": {},
+    "services": {},
+    "resources": {},
+    "contact": {},
+    "reuseableStrings":{
+        "buttonText": "Click Me"
+    }
+}
