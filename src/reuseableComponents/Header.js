@@ -3,6 +3,10 @@ import { DropDownNavLink } from './DropDownNavLink';
 import '../styles/Header.less'
 
 export const Header=()=>{
+    {/*
+        when on specific page the navlink should have black text
+        implement functionality
+    */}
     let serviceRoute ={
         route: "/services",
         page: "Services",
@@ -35,13 +39,13 @@ export const Header=()=>{
 
     return(
         <header className='headerNav'>
-            <img src='https://i.ibb.co/N6HKNCh/logo2.png' id='sunstone' alt="Business Logo" />
-            <h2 className='text--white'>With Grace Counseling, LLC</h2>
+            <img src='https://i.ibb.co/N6HKNCh/logo2.png' id='headerLogo' alt="Business Logo" />
+            <h1 id='headerTitle'>With Grace Counseling, LLC</h1>
             <nav className='navBar'>
                 <NavLink to='/'>Home</NavLink>
-                <NavLink to='/about_me'>About</NavLink>
-                <NavLink to ='/services'>Services</NavLink>
-                <NavLink to= '/resources'>Resources</NavLink>
+                <NavLink activeStyle={{ color:'black' }} to='/about_me'>About</NavLink>
+                <NavLink activeStyle={{ color:'black' }} to ='/services'>Services</NavLink>
+                <NavLink activeStyle={{ color:'black' }} to= '/resources'>Resources</NavLink>
                 {/* <DropDownNavLink navLink={serviceRoute}/> */}
                 {/* <DropDownNavLink navLink={resourcesRoute}/> */}
                 <NavLink to='/contact'>Contact</NavLink>

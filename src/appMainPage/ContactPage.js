@@ -9,7 +9,7 @@ export const Contact=()=>{
 
     return (
       <div id="contact">
-        <h2>Contact Me</h2>
+        <h2>Contact Us</h2>
         <div className="contactBox">
         <ContactInfo/>
         <ContactForm/>
