@@ -14,11 +14,13 @@ import { SupportCircles } from './appMainPage/SupportCirclesPage';
 import { Resources } from './appMainPage/Resources';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css'
+import { FlagsProvider } from './FlagsContext';
 import { ProductProvider } from "./ProductContext"; 
 import { HeroBanner } from './reuseableComponents/HeroBanner';
 
 {/*
   Todo...
+  add newsletter subscription feature
   styling
   media queries
 */}
@@ -105,6 +107,7 @@ function App() {
 
   return (
     // <ProductProvider>
+    <FlagsProvider>
     <div className="App">
       
         <Header/>
@@ -136,6 +139,7 @@ function App() {
         </main>
       <Footer  />
     </div>
+    </FlagsProvider>
     // </ProductProvider>
   );
 }

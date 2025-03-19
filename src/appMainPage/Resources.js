@@ -4,11 +4,12 @@ import { MobileApps } from "../pages/resourcesPage/components/MobileApps"
 import { SupportGroups } from "../pages/resourcesPage/components/SupportGroups"
 import { TherapyAssistance } from "../pages/resourcesPage/components/TherapyAssistancePrograms"
 import { Product } from "../pages/productPage/ProductPage"
+import '../pages/resourcesPage/resourcesPage.less'
 
 export const Resources = () => {
     let products = [
         {
-          img: "https://static.wixstatic.com/media/31f747_6c70620bc4ad492dbbd10c97b26923cf~mv2.png/v1/fill/w_1960,h_1102,al_c,q_95,usm_0.66_1.00_0.01,enc_auto/31f747_6c70620bc4ad492dbbd10c97b26923cf~mv2.png",
+          img: "https://static.wixstatic.com/media/31f747_6c70620bc4ad492dbbd10c97b26923cf~mv2.png/v1/fill/w_450,h_450,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/31f747_6c70620bc4ad492dbbd10c97b26923cf~mv2.png",
           altText:"With Grace Guided Journal",
           title: "Give it some Grace: guided journal",
           description: "Give it some Grace: A Self-Guided Journal is a therapy-guided journal with 60+ therapy prompts, coping skills, and more resources to heal and practice self-care. This journal was written by a clinical therapist and the questions were vetted by clients in their healing journey. This journal was made for anyone contemplating, starting, currently on, or maintaining their healing journey. We are honored that Give it some Grace can be a part of your journey.",
@@ -18,8 +19,8 @@ export const Resources = () => {
     
         },]
     return (
-        <div >
-            <section>
+        <div id='resourcesPage'>
+            <section className="resourceHeader">
                 <div>
                     <h1>Resources</h1>
                 </div>
@@ -31,7 +32,7 @@ export const Resources = () => {
 
                 <Product products={products}/>
             </section>
-            <section>
+            <section className="externalResources">
                 <SuicidePrevention/>
                 <Hotlines/>
                 <MobileApps/>

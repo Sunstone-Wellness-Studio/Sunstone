@@ -1,6 +1,6 @@
 export const ApproachSection = () => {
   return (
-    <section id="approachSection">
+    <section id="approachSection" className="homePageSection">
       <div id="approachDescription">
         <div>
           <h2>WITH GRACE APPROACH</h2>
@@ -20,7 +20,7 @@ export const ApproachSection = () => {
           <br /> Let's get started.
         </h2>
       </div>
-      <div id="approachSteps">
+      <div className="approachSteps">
         <div className="approachStepBox">
           <div className="approachStep">
             <div>

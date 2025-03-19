@@ -1,166 +1,158 @@
-import emailjs from 'emailjs-com';
-import { useState, useEffect } from 'react';
-import {toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-import { ToastContainer } from 'react-toastify';
+import emailjs from "emailjs-com";
+import { useState, useEffect } from "react";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer } from "react-toastify";
 import * as Yup from "yup";
 
-export const ContactForm=()=>{
+export const ContactForm = () => {
+  // Add preferred contact check boxes for email or phone
 
-    // Add preferred contact check boxes for email or phone 
+  let [formState, setFormState] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    subject: "",
+    message: "",
+  });
 
-    
+  // const []=useState({ })
+  const [errors, setErrors] = useState({});
 
-    let [formState,setFormState]=useState({
-        name:'',
-        email:'',
-        phone:'',
-        subject:'',
-        message:''
-    })
+  // const [buttonDisabled,setButtonDisabled]=useState(true);
 
-    // const []=useState({ })
-    const [errors,setErrors]=useState({})
-
-    // const [buttonDisabled,setButtonDisabled]=useState(true);
-
-    const formSchema=Yup.object({
-      name:Yup
-          .string()
-          .required('Must include a Name.'),
-      email:Yup
-          .string()
-          .email("invalid email format")
-          .required('Must be a valid email'),
-      phone:Yup
+  const formSchema = Yup.object({
+    name: Yup.string().required("Must include a Name."),
+    email: Yup.string()
+      .email("invalid email format")
+      .required("Must be a valid email"),
+    phone: Yup
       // regex for 10 digit number
-        .string(),
-        // .matches(/^\d{10}$/, "Phone number must be 10 digits"),
-      subject:Yup
-          .string(),
-      message:Yup
-          .string(),
-    })
+      .string(),
+    // .matches(/^\d{10}$/, "Phone number must be 10 digits"),
+    subject: Yup.string(),
+    message: Yup.string(),
+  });
 
-    // useEffect(()=>{
-    //   formSchema.isValid(formState).then(valid=> setButtonDisabled(!valid));},[formState]);
+  // useEffect(()=>{
+  //   formSchema.isValid(formState).then(valid=> setButtonDisabled(!valid));},[formState]);
 
-
-    const handleChange=(e)=>{
-      const {name, value} = e.target
-      // e.persist();
-      // Yup.reach(formSchema, name)
-      // .validate(value)
-      // .then((valid) => {
-      //   setErrors({ ...errors, [name]: "" });
-      // })
-      // .catch((err) => {
-      //   console.log(`error ${err.errors[0]}`)
-      //   setErrors({ ...errors, [name]: err.errors[0] });
-      //   toast.error('Must complete required fields');
-      // });
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    // e.persist();
+    // Yup.reach(formSchema, name)
+    // .validate(value)
+    // .then((valid) => {
+    //   setErrors({ ...errors, [name]: "" });
+    // })
+    // .catch((err) => {
+    //   console.log(`error ${err.errors[0]}`)
+    //   setErrors({ ...errors, [name]: err.errors[0] });
+    //   toast.error('Must complete required fields');
+    // });
     setFormState({
       ...formState,
       [name]: value,
     });
-        // setFormInfo({...formInfo, [e.target.name]:e.target.value})
-    }
+    // setFormInfo({...formInfo, [e.target.name]:e.target.value})
+  };
 
-    const handleSubmit= async(e)=>{
-        e.preventDefault();
-        try {
-          await formSchema.validate(formState,{abortEarly: false
-          })
-          .then(
-            (result)=>{
-              console.log(result)
-              emailjs.send(process.env.REACT_APP_TEST_SERVICE_ID,process.env.REACT_APP_TEST_CONTACT_TEMPLATE_ID,formState,process.env.REACT_APP_TEST_USER_ID)
-            setFormState({
-            name:'',
-            email:'',
-            phone:'',
-            subject:'',
-            message:''
-            });
-            toast.success('Thanks! We got your message!');
-            
-        },
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      await formSchema.validate(formState, { abortEarly: false }).then(
+        (result) => {
+          console.log(result);
+          emailjs.send(
+            process.env.REACT_APP_TEST_SERVICE_ID,
+            process.env.REACT_APP_TEST_CONTACT_TEMPLATE_ID,
+            formState,
+            process.env.REACT_APP_TEST_USER_ID
+          );
+          setFormState({
+            name: "",
+            email: "",
+            phone: "",
+            subject: "",
+            message: "",
+          });
+          toast.success("Thanks! We got your message!");
+        }
         // (error)=>{
         //     console.log(error.ValidationError);
         //     toast.error('Sorry, your message didn\'t go through. Please try again.');
         // }
-      )
-        } catch (error) {
-          console.log(error.inner)
-          const newErrors = {};
-          error.inner.forEach(err => {
-            newErrors[err.path] = err.message
-            
-          });
-          setErrors(newErrors);
-          // toast.error('Sorry, your message didn\'t go through. Please try again.');
-        }
-        // emailjs.send('adminEmail','template_contact',formState,'sBe9l3BPb6qWEwqbZ')
-        // .then((result)=>{
-        //     console.log(result)
-        //     setFormState({
-        //     name:'',
-        //     email:'',
-        //     phone:'',
-        //     subject:'',
-        //     message:''
-        //     });
-        //     toast.success('Thanks! We got your message!');
-            
-        // },(error)=>{
-        //     console.log(error.text);
-        //     toast.error('Sorry, your message didn\'t go through. Please try again.');
-        // })
+      );
+    } catch (error) {
+      console.log(error.inner);
+      const newErrors = {};
+      error.inner.forEach((err) => {
+        newErrors[err.path] = err.message;
+      });
+      setErrors(newErrors);
+      // toast.error('Sorry, your message didn\'t go through. Please try again.');
     }
+    // emailjs.send('adminEmail','template_contact',formState,'sBe9l3BPb6qWEwqbZ')
+    // .then((result)=>{
+    //     console.log(result)
+    //     setFormState({
+    //     name:'',
+    //     email:'',
+    //     phone:'',
+    //     subject:'',
+    //     message:''
+    //     });
+    //     toast.success('Thanks! We got your message!');
 
-    return(
-        <div>
-            <form id="contactForm" onSubmit={handleSubmit}>
+    // },(error)=>{
+    //     console.log(error.text);
+    //     toast.error('Sorry, your message didn\'t go through. Please try again.');
+    // })
+  };
+
+  return (
+    <div>
+      <form onSubmit={handleSubmit}>
+        <fieldset id="contactForm">
+          <div className="contactFormFields">
             <label>Name *</label>
             <input
               type="text"
               placeholder="Enter your name"
               name="name"
-              id="nameInput"
+              // id="nameInput"
               value={formState.name}
               onChange={handleChange}
-              
             />
-            {errors.name && <div className='error'>{errors.name}</div>}
-            <br />
-            <div id='contactInfoSecondRow'>
-            <div className="contactInfo">
+            {errors.name && <div className="error">{errors.name}</div>}
+          </div>
+          <br />
+          <div className="contactFormFields contactFields">
+            <div className="contactFieldInputs">
               <label>Email *</label>
               <input
                 type="email"
                 placeholder="Enter your email"
                 name="email"
-                id="emailInput"
                 value={formState.email}
                 onChange={handleChange}
-                
               />
-              {errors.email && <div className='error'>{errors.email}</div>}
-              </div>
-              <div className="contactInfo">
+              {errors.email && <div className="error">{errors.email}</div>}
+            </div>
+            <div className="contactFieldInputs">
               <label>Phone</label>
               <input
                 type="text"
                 placeholder="Enter your phone number"
                 name="phone"
-                id="phoneInput"
                 value={formState.phone}
                 onChange={handleChange}
               />
               {/* {errors.phone && <div className='error'>{errors.phone}</div>} */}
             </div>
-            </div>
-            <br />
+          </div>
+          <br />
+          <div className="contactFormFields">
             <label>Subject</label>
             <input
               type="text"
@@ -171,7 +163,9 @@ export const ContactForm=()=>{
               onChange={handleChange}
               // error={errors}
             />
-            <br />
+          </div>
+          <br />
+          <div className="contactFormFields">
             <label>Message</label>
             <textarea
               type="text"
@@ -182,13 +176,13 @@ export const ContactForm=()=>{
               onChange={handleChange}
               // error={errors}
             />
-            <br />
-            {/* <input id='submitBtn' type='submit' value='Send Message'/> */}
-            <button id="submitBtn" >
-              Send Message
-            </button>
-          </form>
-          <ToastContainer />
-        </div>
-    )
-}
+          </div>
+          <br />
+          {/* <input id='submitBtn' type='submit' value='Send Message'/> */}
+          <button id="contactFormSubmitBtn">Submit</button>
+        </fieldset>
+      </form>
+      <ToastContainer />
+    </div>
+  );
+};

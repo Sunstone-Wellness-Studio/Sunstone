@@ -13,7 +13,7 @@ export const AboutMe = () => {
                     <p>I would love to assist you on that journey. Sometimes we need something for us, by us. May we all remember the access to healing is our birthright.</p>
                 </div> */}
       <div>
-        <h2>Get to know us</h2>
+        <h1>Meet the team</h1>
       </div>
       <div className="teamMember">
         <div>
@@ -24,7 +24,7 @@ export const AboutMe = () => {
               className="teamMemberImg"
             />
           </div>
-          <h4>Jae</h4>
+          <h3>Jae Littles-Edwards, LCSW</h3>
         </div>
           <div className="teamMemberDescription">
             <div>
@@ -38,8 +38,8 @@ export const AboutMe = () => {
                 confidence, learn coping skills, life low moments, assist with
                 life transitions, and handle family and relationship troubles.
               </p>
-            </div>
-            <div>
+            <br/>
+            <br/>
               <p>
                 I have a colorful background in the field of social work. I have
                 experience in inpatient, admission/intake, behavior health
@@ -51,8 +51,8 @@ export const AboutMe = () => {
                 therapy. I incorporate holistic and mindfulness practices in
                 therapy.
               </p>
-            </div>
-            <div>
+              <br/>
+              <br/>
               <p>
                 I believe that therapy is a journey and while at times it is
                 hard, it is worth it. We all NEED to be reminded that we are
@@ -78,7 +78,7 @@ export const AboutMe = () => {
               className="teamMemberImg"
             />
           </div>
-          <h4>Nija</h4>
+          <h3>Nija Durden, RCSWI</h3>
         </div>
         <div className="teamMemberDescription">
           <div>
@@ -91,8 +91,8 @@ export const AboutMe = () => {
               solution-focused methods, I support you in discovering your own
               insights and fostering independence.
             </p>
-          </div>
-          <div>
+            <br/>
+            <br/>
             <p>
               I believe that anyone can benefit from therapy. My role is to help
               you continue as the author of your story, guiding you as you
@@ -112,7 +112,7 @@ export const AboutMe = () => {
               alt="Katherine With Grace intern"
               className="teamMemberImg"/>
           </div>
-          <p>Katherine</p>
+          <h3>Katherine</h3>
         </div>
         <div className="teamMemberDescription">
           <p>

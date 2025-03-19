@@ -1,13 +1,16 @@
 {
-    "home": {
-      "welcomeMessage": "Welcome to our application!",
-      
-    },
-    "about": {},
-    "services": {},
-    "resources": {},
-    "contact": {},
-    "reuseableStrings":{
-        "buttonText": "Click Me"
+  "home": {
+    "homeSection": {
+      "welcomeHeader": "Hi, we're glad you're here",
+      "welcomeMessage": "Welcome to With Grace Counseling, LLC.",
+      "welcomePurpose": "Sometimes we don’t have it all together and that’s okay. Sometimes one needs an healing space- free of judgment, and full of acceptance. I want to support and guide you on your journey to find and embrace your potential as you heal, energize, and become aware of your inner strengths- doing it all With Grace"
     }
+  },
+  "about": {},
+  "services": {},
+  "resources": {},
+  "contact": {},
+  "reuseableStrings": {
+    "freeConsultButton": "Book a free consultation"
+  }
 }

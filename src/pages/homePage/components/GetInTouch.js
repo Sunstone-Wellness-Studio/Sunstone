@@ -1,9 +1,12 @@
 import emailjs from "emailjs-com";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from "react-toastify";
 import * as Yup from "yup";
+import { Book } from "./Book";
+import {FlagContext, useFlags} from "../../../FlagsContext"
+// import flags from "../../../flags.json"
 
 export const GetInTouchSection = () => {
 {
@@ -11,6 +14,8 @@ export const GetInTouchSection = () => {
         add scheduling functionality to getInTouchItem1
     */
 }
+  const flags = useContext(FlagContext);
+  
   let [formInfo, setFormInfo] = useState({
     first_name: "",
     last_name: "",
@@ -66,7 +71,7 @@ export const GetInTouchSection = () => {
     }
   };
   return (
-    <section id="getInTouchSection">
+    <section id="getInTouchSection" className="homePageSection">
       <div id="consultation">
         <div id="getInTouchItem1">
           <div >
@@ -74,8 +79,10 @@ export const GetInTouchSection = () => {
           </div>
           <div>
             <p>Schedule your free phone consultation </p>
-            <p>Consultations are usually done each Friday from 11am to 4pm EST. <br/>Each consultation lasts around 15 minutes.</p>
+            <p>Consultations are usually done each Friday from 10am to 4pm EST. <br/>Each consultation lasts around 15 minutes.</p>
           </div>
+          {flags.consultationCalendar?(<Book/>):(<></>)}
+          
         </div>
         <div id="getInTouchItem2">
             <h2>Let us setup your free consultation</h2>
