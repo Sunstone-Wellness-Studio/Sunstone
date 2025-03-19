@@ -9,6 +9,8 @@ import {SafeSpaceSection} from '../pages/homePage/components/SafeSpace';
 import {ApproachSection} from '../pages/homePage/components/Approach';
 import {GetInTouchSection} from '../pages/homePage/components/GetInTouch';
 import { HeroBanner } from '../reuseableComponents/HeroBanner';
+import {FlagContext,useFlags} from "../FlagsContext"
+import { useContext } from 'react';
 
 //todos
 // add media queries
@@ -16,6 +18,9 @@ import { HeroBanner } from '../reuseableComponents/HeroBanner';
 
 const Main=()=>{
     // props.reviews.sort(() => Math.random() - 0.5);
+    // const flags = useContext(FlagContext)
+    const flags = useContext(FlagContext);
+    console.log(flags)
     let heroBannerImages = [
         {
           alt: "one on one therapy",
@@ -66,7 +71,7 @@ const Main=()=>{
         {/* <HeroBanner bannerImgs = {heroBannerImages}/> */}
         {/* new addition to run by Jae */}
 
-        <WelcomeSection/>
+        {flags.heroBanner?(<HeroBanner bannerImgs = {heroBannerImages}/>):(<WelcomeSection/>)}
 
         <QuoteSection/>
           

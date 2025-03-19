@@ -1,15 +1,15 @@
 export const TherapyAssistance = () => {
     return (
-        <div>
+        <div id='assistanceProgramsSection' className="resources">
             <div>
-                <h4>Therapy Assistance Programs</h4>
+                <h3>Therapy<br/>Assistance<br/>Programs</h3>
             </div>
-            <div>
+            <div className="resourceList">
                 <ul>
-                    <li>The Loveland Therapy Fund provides financial assistance to Black women and girls seeking therapy nationally.</li>
-                    <li>Therapy for Black Men provides free therapy to men across the United States.</li>
-                    <li>The Okra Project- provides mutual aid to supporting Black Trans people across the US</li>
-                    <li>The Boris Lawrence Henson Foundation- entitled to five (5) complimentary mental health therapy sessions.</li>
+                    <li><a href="https://thelovelandfoundation.org/therapy-fund/">The Loveland Therapy Fund</a> provides financial assistance to Black women and girls seeking therapy nationally.</li>
+                    <li><a href="https://therapyforblackmen.org/">Therapy for Black Men</a> provides free therapy to men across the United States.</li>
+                    <li><a href="https://www.theokraproject.com/">The Okra Project</a>- provides mutual aid to supporting Black Trans people across the US</li>
+                    <li><a href="https://borislhensonfoundation.org/">The Boris Lawrence Henson Foundation</a>- entitled to five (5) complimentary mental health therapy sessions.</li>
                 </ul>
             </div>
         </div>

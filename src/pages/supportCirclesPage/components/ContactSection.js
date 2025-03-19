@@ -1,35 +1,26 @@
-export const ContactSection=()=>{
-    return(
+export const ContactSection = () => {
+  return (
     <section>
-            <div>
-                <div>
-                    <div>
-                        <div>
-                            <p>Call</p>
-                        </div>
-                        <div>
-                            <p>9044349285</p>
-                        </div>
-
-                    </div>
-                    <div>
-                        <div>
-                            <p>Email</p>
-                        </div>
-                        <div>
-                            <p>withgracemhcounseling@gmail.com</p>
-                        </div>
-                    </div>
-                    <div>
-                        <div>
-                            <p>Follow</p>
-                        </div>
-                        <div>
-                            <p></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        )
-}
+      <div id="graceCircleContactSection">
+        <div className="graceCircleContactBox">
+          <div className="contactItem">
+            <p>Call</p>
+            <br />
+            {/* <br/> */}
+            <p>9044349285</p>
+          </div>
+          <div className="contactItem">
+            <p>Email</p>
+            <br />
+            <p>withgracemhcounseling@gmail.com</p>
+          </div>
+          <div className="contactItem">
+            <p>Follow</p>
+            <br />
+            <p></p>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};

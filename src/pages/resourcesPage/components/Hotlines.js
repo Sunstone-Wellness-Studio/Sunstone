@@ -1,11 +1,11 @@
 export const Hotlines = () => {
     return (
-        <div>
-            <div>
-                <h4>Hotlines</h4>
+        <div id='hotlinesSection' className="resources">
+            <div className="resourceTitle">
+                <h3>Hotlines</h3>
             </div>
-            <div>
-                <ul>
+            <div className='resourceList'> 
+                <ul id='hotlinesList'>
                     <li>National Domestic Violence Hotline 800-7997233</li>
                     <li>National Suicide Prevention Lifeline 800-273-8255</li>
                     <li>National Alliance on Mental Illness Hotline: 800-950-NAMIor text “NAMI” to 741741</li>

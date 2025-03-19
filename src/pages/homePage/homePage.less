@@ -40,18 +40,22 @@
     padding-right: 22rem;
 }
 
-#homeSection button {
+.homeSectionButton {
     margin: 2rem;
     background-color: var(--clr-white);
     border: 0;
     color: var(--clr-sage);
     height: 5vh;
-    width: 15vw;
+    width: 20vw;
 
     a {
         color: var(--clr-timberwolf);
         text-decoration: none;
     }
+}
+
+#homeSectionButton:hover{
+    background-color: var(--clr-hunter-green);
 }
 
 //Quote Section
@@ -296,7 +300,7 @@
 
 }
 
-#approachSteps {
+.approachSteps {
     display: flex;
     flex-direction: row;
     // flex-grow:1;
@@ -345,7 +349,7 @@
 #getInTouchSection {
     grid-area: 7/1/8/7;
     // border: black solid 5px;
-    overflow: hidden;
+    // overflow: hidden;
 
 
     h2 {
@@ -411,6 +415,11 @@
         padding: 1rem;
     }
 
+    label{
+        text-align: start;
+        color: var(--clr-sage)
+    }
+
 
     // textarea{
     //     font-size: 1rem;
@@ -464,14 +473,85 @@
     background-color: var(--clr-black);
 }
 
+#consultationSubmitBtn:hover{
+    background-color: var(--clr-hunter-green);
+}
+
+
+
+// default is max-width:1536
+// .homePageSection{
+// outline: 2px solid blue;
+// max-width: 1536px;
+// margin-left: auto;
+// margin-right: auto;
+// padding-left: 0.5rem;
+// padding-right: 0.5rem;
+// }
+
+
 /* desktop*/
 // @media(max-width:1440px){
 
 // }
+
+
+
+/* 2xL */
+@media(max-width:1536){
+
+}
+/* xL */
+@media(max-width:1280){}
+/* md */
+@media(max-width:768){}
+/* xs */
+@media(max-width:475){}
 /* tablet*/
-@media(max-width:1024px) {
-    
+/* Lg */
+@media screen and (max-width:1024px) {
+    #homePageGridContainer{
+    }
 }
 
 /* phones*/
-@media(max-width:600px) {}
+/* sm */
+// @media screen and (max-width:600px) {
+    @media (width <= 640px) {
+    #homePageGridContainer{
+        display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(14, 1fr) auto;
+    
+    }
+    #homeSection{
+        grid-area: 1/1/1/2;
+        // margin: 0 5% 0 5%;
+        width:100%;
+        h1{
+            margin: 5%;
+        }
+
+        p{
+            font-size: 2rem;
+    margin: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+        }
+    }
+    .approachSteps {
+        background-color: blue;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+ /* tablets */
+//  @media(max-width: 920px){
+
+//  }
+ 
+//  /* phones */
+//  @media(max-width: 420px){
+
+//  }

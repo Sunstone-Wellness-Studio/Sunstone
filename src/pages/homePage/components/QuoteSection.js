@@ -2,7 +2,7 @@ import "../../homePage/homePage.less";
 
 export const QuoteSection = () => {
   return (
-    <section className="quoteSection">
+    <section className="quoteSection homePageSection">
       {/* <div id="quoteBox"> */}
       <div className="quoteTxt">
           <h3>

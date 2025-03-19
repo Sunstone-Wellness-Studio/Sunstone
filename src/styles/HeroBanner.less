@@ -1,4 +1,29 @@
-.container {
+//rework transition
+
+#heroHomeSection {
+  grid-area: 1/1/2/7;
+  // background-color: var(--clr-timberwolf);
+  // color: var(--clr-white);
+  position: relative;
+    text-align: center;
+    background: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ), var(--img);
+    background-size: cover;
+    height: 100vh;
+
+  h1 {
+      font-size: 6rem;
+      margin: 1rem;
+  }
+
+}
+
+
+.heroSectionContainer {
+
     position: relative;
     text-align: center;
     background: 
@@ -11,7 +36,7 @@
 }
 
   /* Centered text */
-.centered {
+.heroSectionCenteredText {
     color: white;
     position: absolute;
     left: 50%;
@@ -20,4 +45,18 @@
     text-align: 'center';
     padding: '5px 0';
     font-size: x-large;
+}
+
+.homeSectionButton {
+  margin: 2rem;
+  background-color: var(--clr-white);
+  border: 0;
+  color: var(--clr-sage);
+  height: 5vh;
+  width: 20vw;
+
+  a {
+      color: var(--clr-timberwolf);
+      text-decoration: none;
+  }
 }

@@ -1,22 +1,23 @@
-import { HashLink } from "react-router-hash-link"
-import '../../homePage/homePage.less';
-
+import { HashLink } from "react-router-hash-link";
+import "../../homePage/homePage.less";
+import strings from "../../../assets/strings.json";
 
 export const WelcomeSection = () => {
-    return (
-        <section id='homeSection'>
-            <div className='homeContent'>
-                
-                    <h1>HI, I'M GLAD YOU'RE HERE</h1>
-  
-                    <p >Welcome to With Grace Counseling, LLC.</p>
+  return (
+    <section id="homeSection" className="homePageSection">
+      <div className="homeContent">
+        <h1>{strings.home.homeSection.welcomeHeader}</h1>
 
-                    <p>Sometimes we don’t have it all together and that’s okay. Sometimes one needs an healing space- free of judgment, and full of acceptance. I want to support and guide you on your journey to find and embrace your potential as you heal, energize, and become aware of your inner strengths- doing it all With Grace</p>
+        <p>{strings.home.homeSection.welcomeMessage}</p>
+        <br/>
+        <p>{strings.home.homeSection.welcomePurpose}</p>
 
-                    <button><HashLink smooth to='/#consultation'>Book a free consultation</HashLink></button>
-                
-            </div>
-        </section>
-    )
-}
-
+        <button className="homeSectionButton">
+          <HashLink smooth to="/#consultation">
+            {strings.reuseableStrings.freeConsultButton}
+          </HashLink>
+        </button>
+      </div>
+    </section>
+  );
+};

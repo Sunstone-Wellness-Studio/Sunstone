@@ -1,0 +1,149 @@
+#resourcesPage {
+    background-color: var(--clr-white);
+    color: var(--clr-brunswick-green);
+    margin: 5rem 0 5rem 0;
+
+    h1 {
+        font-size: 5rem;
+        color: var(--clr-sage)
+    }
+
+    p {
+        font-size: 2rem;
+    }
+
+    li {
+        font-size: 1.5rem;
+    }
+
+}
+
+.resourceHeader {
+    text-align: start;
+    margin-left: 20rem;
+    margin-right: 10rem;
+}
+
+.externalResources {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.resources {
+    margin: 5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 80%;
+
+    h3 {
+        font-size: 2rem;
+    }
+
+
+
+    ul {
+
+        text-align: start;
+        width: 500px;
+        max-width: 500px;
+        display: inline-block;
+    }
+
+    li {
+        padding-bottom: 8px;
+        /* Add some space between list items */
+        line-height: 1.6;
+        /* Proper line spacing for readability */
+    }
+
+    a {
+        text-decoration: none;
+        /* Remove underline */
+        color: var(--clr-brunswick-green);
+        /* Blue color for links */
+    }
+
+    a:hover {
+        color: var(--clr-fern-green);
+        text-decoration: underline;
+    }
+
+
+
+
+}
+
+
+
+
+#productsSection {
+    margin: 5rem;
+
+    h3 {
+        font-size: 2rem;
+        text-align: start;
+        margin-left: 20rem;
+    }
+
+    .productImg {
+        height: 19rem;
+        width: 18rem;
+
+
+    }
+
+    .products {
+        padding: 3rem;
+    }
+
+    .onHoverDisplay {
+        text-align: start;
+        margin-left: 20rem;
+
+    }
+
+    .offHoverDisplay {
+        text-align: start;
+        margin-left: 20rem;
+    }
+
+}
+
+
+
+
+
+.onHoverDisplay {
+    display: none;
+}
+
+.offHoverDisplay:hover {
+    display: none;
+
+
+
+}
+
+.offHoverDisplay:hover+.onHoverDisplay {
+
+    display: flex;
+    align-items: center;
+
+
+}
+
+.hoverDescription {
+
+    text-align: start;
+    text-indent: 5rem;
+    margin-left: 5rem;
+    color: var(--clr-brunswick-green);
+}
+
+a {
+
+    font-size: 2rem;
+    color: var(--clr-fern-green);
+}

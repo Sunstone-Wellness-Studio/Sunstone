@@ -1,7 +1,7 @@
 export const SafeSpaceSection = () => {
   return (
     <div id="safeSpaceSection">
-      <section id="safeSpaceSection1">
+      <section id="safeSpaceSection1" className="homePageSection">
           <div>
             <h2>
               Creating a safe space for growth and <br />
@@ -37,7 +37,7 @@ export const SafeSpaceSection = () => {
               </p>
             </div>
             </section>
-          <section id="safeSpaceSection2">
+          <section id="safeSpaceSection2" className="homePageSection">
             <div>
               <div>
                 <h3>Here's How I Can Help:</h3>

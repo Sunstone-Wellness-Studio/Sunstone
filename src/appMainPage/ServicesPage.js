@@ -136,7 +136,7 @@ export const Services = () => {
             {/* </div> */}
             <ServicesSection services={services}/>
             <Faq faqs={faqs}/>
-            <Reviews reviews={reviews}/>
+            {/* <Reviews reviews={reviews}/> */}
         </div>
     )
 }
